@@ -1,0 +1,10 @@
+Starting...
+Main Camera contains TurnControl.cs which lets you select a PlayerPiece as the starting player; on Start() that player gets its Movement method subscribed to its OnUpdate event.
+
+Gameplay...
+The Movement method is split into two portions: 1) getting player input, 2) applying velocity to its rigidbody.
+(The rigidbody is 2D and kinematic).
+
+Whenever a PlayerPiece collides with a TreasurePiece the TreasurePiece is disabled and hidden; TreasurePiece's static TotalCollectedTreasure increases by 1; EndgameScene's CheckGameComplete is passed and if you've collected all the pieces of treasure the game ends. 
+
+Once all pieces of Treasure have been collected the EndGame method is ran. It's split into three portions: Revealing the canvas, starting the timer to reset the game, and disabling the turn system. This can only be passed once. 

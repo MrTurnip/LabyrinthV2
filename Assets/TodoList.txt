@@ -1,0 +1,10 @@
+2du List
+1. Create Graphics (Complete)
+2. Allow player movement. (Complete)
+3. Allow prize acquisition (Complete)
+3.a Win game.
+4. Turn control.
+4.a Display active turn.
+5. Randomize maze.
+6. Maze walls.
+7. Shift column/row.
