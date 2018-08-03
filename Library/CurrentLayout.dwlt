@@ -520,9 +520,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 902e0000
-    m_LastClickedID: 11920
-    m_ExpandedIDs: e6fbffff00000000022d0000142d0000202d0000662d00001e2e0000
+    m_SelectedIDs: 542d0000
+    m_LastClickedID: 11604
+    m_ExpandedIDs: e6fbffff00000000542d0000c22d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -823,9 +823,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.4906499, y: 3.6290596, z: -0.064453125}
+    m_Target: {x: -0.11347248, y: -0.2208426, z: -0.064453125}
     speed: 2
-    m_Value: {x: 1.4906499, y: 3.6290596, z: -0.064453125}
+    m_Value: {x: -0.11347248, y: -0.2208426, z: -0.064453125}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0

@@ -2602,12 +2602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {x: 0, y: 0, z: 0}
-  pointB: {x: 0, y: 0, z: 0}
-  rate: 0.1
-  progress: 0
   direction: {x: 0, y: 0, z: 0}
-  shift: 0
   OnUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -4521,6 +4516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1432673004}
   - component: {fileID: 1432673005}
+  - component: {fileID: 1432673006}
   m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
@@ -4566,6 +4562,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &1432673006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432673003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1433725405
 Prefab:
   m_ObjectHideFlags: 0
@@ -4742,12 +4755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {x: 0, y: 0, z: 0}
-  pointB: {x: 0, y: 0, z: 0}
-  rate: 0.1
-  progress: 0
   direction: {x: 0, y: 0, z: 0}
-  shift: 0
   OnUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -5536,12 +5544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {x: 0, y: 0, z: 0}
-  pointB: {x: 0, y: 0, z: 0}
-  rate: 0.1
-  progress: 0
   direction: {x: 0, y: 0, z: 0}
-  shift: 0
   OnUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -5902,12 +5905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {x: 0, y: 0, z: 0}
-  pointB: {x: 0, y: 0, z: 0}
-  rate: 0.1
-  progress: 0
   direction: {x: 0, y: 0, z: 0}
-  shift: 0
   OnUpdate:
     m_PersistentCalls:
       m_Calls: []
