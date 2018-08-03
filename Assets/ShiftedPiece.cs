@@ -13,7 +13,7 @@ public class ShiftedPiece : MonoBehaviour {
     void Translate()
     {
         Transform parent = this.transform.parent;
-        parent.Translate(direction);
+        parent.Translate(direction, Space.World);
     }
 
     void RenewOnUpdate()
