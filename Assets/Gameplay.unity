@@ -2545,6 +2545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 836765190}
   - component: {fileID: 836765191}
+  - component: {fileID: 836765192}
   m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
@@ -2590,6 +2591,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &836765192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836765189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {x: 0, y: 0, z: 0}
+  pointB: {x: 0, y: 0, z: 0}
+  rate: 0.1
+  progress: 0
+  direction: {x: 0, y: 0, z: 0}
+  shift: 0
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &869288429
 Prefab:
   m_ObjectHideFlags: 0
@@ -4662,6 +4685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1458010204}
   - component: {fileID: 1458010205}
+  - component: {fileID: 1458010206}
   m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
@@ -4707,6 +4731,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &1458010206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1458010203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {x: 0, y: 0, z: 0}
+  pointB: {x: 0, y: 0, z: 0}
+  rate: 0.1
+  progress: 0
+  direction: {x: 0, y: 0, z: 0}
+  shift: 0
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1466580092
 Prefab:
   m_ObjectHideFlags: 0
@@ -5433,6 +5479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1678059585}
   - component: {fileID: 1678059586}
+  - component: {fileID: 1678059587}
   m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
@@ -5478,6 +5525,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &1678059587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1678059584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {x: 0, y: 0, z: 0}
+  pointB: {x: 0, y: 0, z: 0}
+  rate: 0.1
+  progress: 0
+  direction: {x: 0, y: 0, z: 0}
+  shift: 0
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1706679749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4472501679476690, guid: aafcc3ca6333a7342a78a752dba8574c,
@@ -5776,6 +5845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1855874435}
   - component: {fileID: 1855874436}
+  - component: {fileID: 1855874437}
   m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
@@ -5821,6 +5891,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &1855874437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855874434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38572228bf93bef46979a524c1b2f7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {x: 0, y: 0, z: 0}
+  pointB: {x: 0, y: 0, z: 0}
+  rate: 0.1
+  progress: 0
+  direction: {x: 0, y: 0, z: 0}
+  shift: 0
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1891100829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4472501679476690, guid: aafcc3ca6333a7342a78a752dba8574c,

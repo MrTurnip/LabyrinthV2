@@ -31,7 +31,11 @@ public class MovementArrow : MonoBehaviour
 
         foreach (RaycastHit2D rayhit2D in rayHit)
         {
-            Debug.Log(rayhit2D.transform.gameObject.layer);
+            Transform rayhitTransform = rayhit2D.transform;
+            ShiftedPiece shiftedPiece = rayhitTransform.GetComponentInChildren<ShiftedPiece>();
+            
+            if (shiftedPiece != null)
+                shiftedPiece.SubscribeSingleShift(this.transform.up);
         }
     }
 
