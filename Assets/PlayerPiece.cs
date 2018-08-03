@@ -9,11 +9,23 @@ public enum PlayerColor {Yellow, White, Pink, Blue }
 public class PlayerPiece : MonoBehaviour {
 
     public UnityEvent OnUpdate;
-    public Rigidbody2D rigidbody2D;
+    public new Rigidbody2D rigidbody2D;
     public List<TreasurePiece> treasure = new List<TreasurePiece>();
+
 
     private Vector2 direction = new Vector2();
     public float speed;
+
+    public void KillVelocity()
+    {
+        rigidbody2D.velocity = Vector2.zero;
+    }
+
+    public void UnscubscribeControl()
+    {
+        KillVelocity();
+        OnUpdate = new UnityEvent();
+    }
 
     private void CheckKeyboardPress()
     {
@@ -35,7 +47,7 @@ public class PlayerPiece : MonoBehaviour {
         UpdateRigidbody();
     }
 
-    public void SubscribeMovement()
+    public void SubscribeControl()
     {
         OnUpdate.AddListener(Movement);
     }
