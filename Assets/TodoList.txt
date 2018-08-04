@@ -1,10 +1,16 @@
+The problem is that MovementArrow's raycast has been collecting box colliders in each Piece and then having them move twice for it. 
+The solution would be to just select every other collider in the resulting list, but that would be unprofessional.
+Solution: There is no solution tonight. By nice to myself and go to bed.
+
 2du List
 1. Create Graphics (Complete)
 2. Allow player movement. (Complete)
 3. Allow prize acquisition (Complete)
-3.a Win game.
-4. Turn control.
-4.a Display active turn.
-5. Randomize maze.
-6. Maze walls.
-7. Shift column/row.
+3.a Win game. (Complete)
+3.b Disable controls
+4. Turn control. (Complete)
+4.a Display active turn. 
+5. Randomize maze. (Complete)
+6. Maze tile walls. (Complete)
+6.a Outer walls.
+7. Shift column/row. (Problematic...)

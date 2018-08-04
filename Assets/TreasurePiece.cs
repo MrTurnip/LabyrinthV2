@@ -33,6 +33,7 @@ public class TreasurePiece : MonoBehaviour
 
     private void IncreasecollectedTreasureCount() { CollectedTreasure++; }
 
+
     public void Acquire(PlayerPiece acquirer)
     {
         DisableSpriteRenderer();
