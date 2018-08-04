@@ -74,6 +74,7 @@
     <Compile Include="Assets\TileRotator.cs" />
     <Compile Include="Assets\TreasurePiece.cs" />
     <Compile Include="Assets\TurnControl.cs" />
+    <Compile Include="Assets\TurnDisplay.cs" />
     <None Include="Assets\TodoList.txt" />
     <None Include="Assets\LayoutNotes.txt" />
     <Reference Include="UnityEditor.StandardEvents">

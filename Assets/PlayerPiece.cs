@@ -34,6 +34,13 @@ public class PlayerPiece : MonoBehaviour {
 
         direction.y = Input.GetAxis("Vertical");
         direction.y *= speed;
+
+        bool enterIsDown = Input.GetKeyDown(KeyCode.Return);
+        if (enterIsDown)
+        {
+            PhaseControl phaseControl = Gameboard.FindObjectOfType<PhaseControl>();
+            phaseControl.StartTileShiftPhase();
+        }
     }
 
     private void UpdateRigidbody()
@@ -41,7 +48,7 @@ public class PlayerPiece : MonoBehaviour {
         rigidbody2D.velocity = direction;
     }
 
-    private void Movement()
+    private void Control()
     {
         CheckKeyboardPress();
         UpdateRigidbody();
@@ -49,7 +56,7 @@ public class PlayerPiece : MonoBehaviour {
 
     public void SubscribeControl()
     {
-        OnUpdate.AddListener(Movement);
+        OnUpdate.AddListener(Control);
     }
 
 	// Use this for initialization

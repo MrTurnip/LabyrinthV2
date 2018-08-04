@@ -27,6 +27,22 @@ public class MovementArrow : MonoBehaviour
 
     public UnityEvent OnClick;
 
+    void SetSpriteRenderer(bool isEnabled)
+    {
+        SpriteRenderer renderer = GetComponentInParent<SpriteRenderer>();
+        renderer.enabled = isEnabled;
+    }
+
+    void EnableSpriteRenderer()
+    {
+        SetSpriteRenderer(true);
+    }
+
+    void DisableSpriteRenderer()
+    {
+        SetSpriteRenderer(false);
+    }
+
     private void SwitchToMovementPhase()
     {
         OnClick = new UnityEvent();
@@ -34,6 +50,8 @@ public class MovementArrow : MonoBehaviour
 
     public void UnsubscribeFromOnClick()
     {
+        DisableSpriteRenderer();
+
         OnClick = new UnityEvent();
     }
 
@@ -63,6 +81,8 @@ public class MovementArrow : MonoBehaviour
 
     public void SubscribeShiftTiles()
     {
+        EnableSpriteRenderer();
+
         OnClick.AddListener(ShiftTiles);
     }
 

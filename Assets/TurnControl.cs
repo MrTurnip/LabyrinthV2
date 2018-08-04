@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TurnControl : MonoBehaviour {
 
@@ -8,9 +9,11 @@ public class TurnControl : MonoBehaviour {
 
     public List<PlayerPiece> players = new List<PlayerPiece>();
     public int activePlayer = 0;
-    public PlayerPiece ActivePlayer{get{ return players[activePlayer]; }}
-    
-    private void DisableActivePlayerMovement()
+    public PlayerPiece ActivePlayer { get { return players[activePlayer]; } }
+
+    public UnityEvent OnPlayerSwitch;
+
+    private void DisableActivePlayerControl()
     {
         ActivePlayer.UnscubscribeControl();
     }
@@ -20,6 +23,8 @@ public class TurnControl : MonoBehaviour {
         activePlayer++;
         if (activePlayer > 3)
             activePlayer = 0;
+
+        OnPlayerSwitch.Invoke();
     }
 
     private void EnableActivePlayerMovement()
@@ -29,9 +34,16 @@ public class TurnControl : MonoBehaviour {
 
     public void NextTurn()
     {
-        DisableActivePlayerMovement();
+        DisableActivePlayerControl();
         PushActivePlayer();
         EnableActivePlayerMovement();
+    }
+
+    public void EndTurn()
+    {
+        DisableActivePlayerControl();
+
+     
     }
 
 	// Use this for initialization
