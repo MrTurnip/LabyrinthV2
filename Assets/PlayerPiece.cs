@@ -38,8 +38,13 @@ public class PlayerPiece : MonoBehaviour {
         bool enterIsDown = Input.GetKeyDown(KeyCode.Return);
         if (enterIsDown)
         {
+            TurnControl turnControl = Gameboard.FindObjectOfType<TurnControl>();
+            turnControl.DisableActivePlayerControl();
+            turnControl.NextPlayer();
+
             PhaseControl phaseControl = Gameboard.FindObjectOfType<PhaseControl>();
             phaseControl.StartTileShiftPhase();
+            
         }
     }
 

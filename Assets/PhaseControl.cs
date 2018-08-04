@@ -12,10 +12,11 @@ public class PhaseControl : MonoBehaviour
 
     public void StartTileShiftPhase()
     {
-        TurnControl turnControl = Gameboard.FindObjectOfType<TurnControl>();
-        turnControl.EndTurn();
+       // TurnControl turnControl = Gameboard.FindObjectOfType<TurnControl>();
+       // turnControl.EndTurn();
 
         MovementArrow.SubscribeAllToShiftTiles();
+      //  turnControl.OnPlayerSwitch.Invoke();
     }
 
     public void StartMovementPhase()
@@ -23,7 +24,7 @@ public class PhaseControl : MonoBehaviour
         MovementArrow.UnsubscribeAllToShiftTiles();
 
         TurnControl turnControl = Gameboard.FindObjectOfType<TurnControl>();
-        turnControl.NextTurn();
+        turnControl.EnableActivePlayerMovement();
     }
 
     public void ClearPhaseInitializer()

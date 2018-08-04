@@ -5,7 +5,7 @@ using UnityEngine;
 public class TreasurePiece : MonoBehaviour
 {
     public static int CollectedTreasure = 0;
-    public static int TotalTreasurePieces = 9;
+    public static int TotalTreasurePieces = 8;
 
     public bool isAcquired;
 
