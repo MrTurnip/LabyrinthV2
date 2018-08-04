@@ -5,15 +5,28 @@ using UnityEngine.Events;
 
 
 
+
 public class ShiftedPiece : MonoBehaviour {
 
     public Vector3 direction;
     public UnityEvent OnUpdate;
 
-    void Translate()
+    void SafeTranslate()
     {
         Transform parent = this.transform.parent;
         parent.Translate(direction, Space.World);
+
+        Vector2 parentPos = parent.position;
+        if (parentPos.x < -5)
+            parentPos.x = 4.5f;
+        if (parentPos.x > 5)
+            parentPos.x = -4.5f;
+        if (parentPos.y > 5)
+            parentPos.y = -4.5f;
+        if (parentPos.y < -5)
+            parentPos.y = 4.5f;
+
+        parent.position = parentPos;
     }
 
     void RenewOnUpdate()
@@ -23,7 +36,7 @@ public class ShiftedPiece : MonoBehaviour {
 
     private void ShiftOnce()
     {
-        Translate();
+        SafeTranslate();
         RenewOnUpdate();
     }
 

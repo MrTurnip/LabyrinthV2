@@ -37,6 +37,8 @@ public class MovementArrow : MonoBehaviour
             if (shiftedPiece != null)
                 shiftedPiece.SubscribeSingleShift(this.transform.up);
         }
+
+        
     }
 
     public void SubscribeShiftTiles()
