@@ -16,7 +16,26 @@ public class MovementArrow : MonoBehaviour
         }
     }
 
+    public static void UnsubscribeAllToShiftTiles()
+    {
+        MovementArrow[] arrows = GameObject.FindObjectsOfType<MovementArrow>();
+        foreach (MovementArrow arrow in arrows)
+        {
+            arrow.UnsubscribeFromOnClick();
+        }
+    }
+
     public UnityEvent OnClick;
+
+    private void SwitchToMovementPhase()
+    {
+        OnClick = new UnityEvent();
+    }
+
+    public void UnsubscribeFromOnClick()
+    {
+        OnClick = new UnityEvent();
+    }
 
     public void ShiftTiles()
     {
@@ -38,7 +57,8 @@ public class MovementArrow : MonoBehaviour
                 shiftedPiece.SubscribeSingleShift(this.transform.up);
         }
 
-        
+        PhaseControl phaseControl = GameObject.FindObjectOfType<PhaseControl>();
+        phaseControl.StartMovementPhase();
     }
 
     public void SubscribeShiftTiles()

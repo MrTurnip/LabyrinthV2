@@ -10,12 +10,17 @@ public class PhaseControl : MonoBehaviour
     public Phase phase = Phase.PlaceTile;
     public bool phaseInitialized = false;
 
-    public void StartTilePlacement()
+    public void StartTileShiftPhase()
     {
-        TileRotator tileRotator = GameObject.FindObjectOfType<TileRotator>();
-        tileRotator.SubscribeClickToRotate();
-
         MovementArrow.SubscribeAllToShiftTiles();
+    }
+
+    public void StartMovementPhase()
+    {
+        MovementArrow.UnsubscribeAllToShiftTiles();
+
+        TurnControl turnControl = Gameboard.FindObjectOfType<TurnControl>();
+        turnControl.NextTurn();
     }
 
     public void ClearPhaseInitializer()
@@ -27,7 +32,7 @@ public class PhaseControl : MonoBehaviour
 
     public void Start()
     {
-        InitializePhase.AddListener(StartTilePlacement);
+        InitializePhase.AddListener(StartTileShiftPhase);
         InitializePhase.AddListener(ClearPhaseInitializer);
 
         InitializePhase.Invoke();
